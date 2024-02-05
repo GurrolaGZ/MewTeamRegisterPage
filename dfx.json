@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "RegisterPage_backend": {
+      "main": "src/RegisterPage_backend/main.mo",
+      "type": "motoko"
+    },
+    "RegisterPage_frontend": {
+      "dependencies": [
+        "RegisterPage_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/RegisterPage_frontend/src/index.html"
+      },
+      "source": [
+        "src/RegisterPage_frontend/assets",
+        "dist/RegisterPage_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
